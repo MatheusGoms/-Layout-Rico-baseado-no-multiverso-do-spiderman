@@ -1,0 +1,124 @@
+body {
+​ ​ margin: 0;
+​ ​ font-family: 'Montserrat', Arial, sans-serif;
+​ ​ background: linear-gradient(135deg, #1a1a2e 60%, #e94560 100%);
+​ ​ color: #fff;
+​ ​ min-height: 100vh;
+​ ​ overflow-x: hidden;
+}
+
+header {
+​ ​ text-align: center;
+​ ​ padding: 38px 20px 12px 20px;
+​ ​ background: rgba(26, 26, 46, 0.95);
+​ ​ position: relative;
+​ ​ box-shadow: 0 4px 24px #0008;
+}
+
+#logo {
+​ ​ height: 70px;
+​ ​ filter: drop-shadow(2px 4px 6px #e94560);
+​ ​ animation: spin 2s linear infinite;
+}
+@keyframes spin {
+​ ​ 0% { transform: rotate(-5deg);}
+​ ​ 50% { transform: rotate(10deg);}
+​ ​ 100% { transform: rotate(-5deg);}
+}
+
+h1 {
+​ ​ font-size: 2.5em;
+​ ​ margin: 10px 0 12px 0;
+​ ​ letter-spacing: 2px;
+​ ​ text-shadow: 0 2px 8px #e94560, 0 0 16px #000;
+}
+
+.multiverse {
+​ ​ display: flex;
+​ ​ flex-wrap: wrap;
+​ ​ justify-content: center;
+​ ​ align-items: flex-end;
+​ ​ gap: 48px;
+​ ​ padding: 60px 12px 40px 12px;
+​ ​ position: relative;
+}
+
+.card {
+​ ​ position: relative;
+​ ​ background: rgba(28, 28, 46, 0.90);
+​ ​ border: 2px solid #fff;
+​ ​ border-radius: 18px;
+​ ​ box-shadow: 0 6px 24px #e94560, 0 0 40px #fff3;
+​ ​ width: 220px;
+​ ​ height: 340px;
+​ ​ margin-top: 22px;
+​ ​ overflow: visible;
+​ ​ text-align: center;
+​ ​ transition: transform 0.3s, box-shadow 0.3s;
+​ ​ cursor: pointer;
+​ ​ z-index: 1;
+}
+.card:hover {
+​ ​ transform: scale(1.08) translateY(-12px);
+​ ​ box-shadow: 0 16px 48px #e94560, 0 0 80px #fff5;
+}
+
+.hero {
+​ ​ width: 120px;
+​ ​ position: absolute;
+​ ​ top: -60px;
+​ ​ left: 50%;
+​ ​ transform: translateX(-50%);
+​ ​ filter: drop-shadow(0 8px 22px #e94560cc);
+​ ​ transition: filter 0.3s;
+​ ​ z-index: 2;
+}
+.card:hover .hero {
+​ ​ filter: drop-shadow(0 0 40px #fff);
+}
+
+.card h2 {
+​ ​ margin-top: 80px;
+​ ​ font-size: 1.5em;
+​ ​ color: #e94560;
+​ ​ text-shadow: 0 2px 8px #fff3;
+​ ​ font-weight: bold;
+}
+
+.universe {
+​ ​ display: block;
+​ ​ margin-top: 16px;
+​ ​ font-size: 1.15em;
+​ ​ color: #fff;
+​ ​ background: #e94560;
+​ ​ border-radius: 6px;
+​ ​ padding: 4px 12px;
+​ ​ box-shadow: 0 2px 8px #e94560a8;
+​ ​ letter-spacing: 1px;
+}
+
+footer {
+​ ​ text-align: center;
+​ ​ padding: 18px;
+​ ​ background: rgba(26, 26, 46, 0.95);
+​ ​ color: #fff;
+​ ​ position: fixed;
+​ ​ width: 100vw;
+​ ​ left: 0;
+​ ​ bottom: 0;
+​ ​ box-shadow: 0 -2px 24px #e94560;
+}
+
+@media (max-width: 900px) {
+​ ​ .multiverse {
+​ ​ ​ ​ flex-direction: column;
+​ ​ ​ ​ align-items: center;
+​ ​ ​ ​ gap: 60px;
+​ ​ }
+​ ​ .card {
+​ ​ ​ ​ width: 80vw;
+​ ​ ​ ​ min-width: 220px;
+​ ​ ​ ​ max-width: 320px;
+​ ​ ​ ​ height: 340px;
+​ ​ }
+}
